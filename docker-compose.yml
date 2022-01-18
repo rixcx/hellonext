@@ -1,0 +1,10 @@
+version: "3" #このdocker-compose.ymlのバージョン
+services: #起動するサービス（コンテナ）の設定定義
+  hellonext: #「nextjs」という名前でサービスを定義
+    build: . #パスにあるDockerfileを実行
+    ports: #ポート設定
+      - "3000:3000" #左辺がローカル、右辺がコンテナのポート localostの3000番ポートあてにアクセスすると、コンテナの3000番ポートあてに転送
+    container_name: hellonext #コンテナ名の設定
+    volumes: #データのマウント設定
+      - .:/usr/src/app/next #データのマウント設定 左辺がローカル、右辺がコンテナのマウント先
+    command: sh -c "cd hellonext && npm run dev" #起動後にコマンド実行
