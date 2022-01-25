@@ -1,0 +1,13 @@
+@use "common" as common;
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: common.$color-bg;
+;
+}
+
+main {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}

@@ -1,0 +1,37 @@
+@use "global/common" as common;
+
+.list {
+  font-weight: bold;
+}
+
+.item {
+  + .item {
+    margin-top: 2.5rem;
+  }
+  
+  > a {
+    display: block;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 0 13px 24px 0 rgba(102, 103, 171, 5%);
+    transition: all .3s ease-out;
+    
+    &:hover {
+      border: 1px solid common.$color-secondary;
+      box-shadow: 0 13px 24px 0 rgba(102, 103, 171, 20%);
+    }
+  }
+  
+  .date {
+    margin-bottom: 0.6rem;
+    color: common.$color-secondary;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    font-size: 1.625rem;
+    line-height: 1.4;
+  }
+}

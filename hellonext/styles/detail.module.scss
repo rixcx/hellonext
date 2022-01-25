@@ -1,0 +1,130 @@
+@use "global/common" as common;
+
+.header {
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  
+  .date {
+    margin-bottom: 0.6rem;
+    color: common.$color-secondary;
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+}
+
+.body {
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 13px 24px 0 rgba(102, 103, 171, 5%);
+  
+  & > h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    margin: 2em auto 0.5rem;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  & > h1 {
+    font-size: 1.875rem; //30
+  }
+
+  & > h2 {
+    font-size: 1.5rem; //24
+  }
+
+  & > h3 {
+    font-size: 1.25rem; //20
+  }
+
+  & > h4 {
+    font-size: 1rem; //16px
+  }
+
+  & > h5 {
+    font-size: 1rem; //16px
+  }
+
+  & > p {
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+
+    & > code {
+      background-color: common.$color-bg;
+      border-radius: 3px;
+      padding: 0.1rem 0.2rem;
+      color: #ff668a;
+      margin: 0 0.1rem;
+    }
+  }
+  
+  & a {
+    padding: 0 0.1rem;
+    color: common.$color-font-thin;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    @include common.hover;
+  }
+    
+  & img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  & > blockquote {
+    position: relative;
+    padding: 1rem;
+    border-left: common.$color-font-thin 0.3rem solid;
+    color: common.$color-font-thin;
+    z-index: 1;
+
+    & > a {
+      margin-top: 1rem;
+      text-decoration: underline;
+      text-underline-offset: 0.2rem;
+      @include common.hover;
+    }
+  }
+
+  & > pre {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  & > ol, ul {
+    list-style-position: inside;
+    
+    > li + li {
+      margin-top: 0.6rem;
+    }
+  }
+
+  & > ol {
+    list-style-type: decimal;
+  }
+
+  & > ul {
+    list-style-type: disc;
+
+    > li {
+      > ul {
+        list-style: circle;
+        list-style-position: inside;
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+        
+        > li + li {
+          margin-top: 0.3rem;
+        }
+      }
+    }
+  }
+}

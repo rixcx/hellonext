@@ -1,0 +1,10 @@
+@use "global/common" as common;
+
+.footer {
+  margin-top: 12.5rem;
+  padding: 1rem;
+  background-color: common.$color-secondary;
+  text-align: center;
+  font-size: 0.75rem;
+  color: common.$color-font-thin;
+}
