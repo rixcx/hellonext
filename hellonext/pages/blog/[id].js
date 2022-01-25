@@ -4,7 +4,7 @@ import cheerio from 'cheerio';
 import hljs from 'highlight.js';
 
 import styles from '../../styles/detail.module.scss';
-import 'highlight.js/styles/Monokai-Sublime.css';
+import 'highlight.js/styles/monokai-sublime.css';
 
 export default function blogId({ blog, highlightedBody }) {
   return (
